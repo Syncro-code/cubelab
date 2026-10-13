@@ -1,5 +1,7 @@
 # CubeLab Timer
 
+**Open it: https://syncro-code.github.io/cubelab/** · **Windows download: [Releases](https://github.com/Syncro-code/cubelab/releases/latest)**
+
 A dark-themed speedcubing timer for **3x3x3, 4x4x4 and 5x5x5** that runs on **iPhone** (as an installable web app) and **Windows** (as a desktop app) from one codebase.
 
 ![CubeLab icon](app/icons/icon-192.png)
@@ -18,7 +20,7 @@ A dark-themed speedcubing timer for **3x3x3, 4x4x4 and 5x5x5** that runs on **iP
 
 ### iPhone
 
-1. Open the web app link (`https://<your-username>.github.io/<repo-name>/`) in **Safari**.
+1. Open **https://syncro-code.github.io/cubelab/** in **Safari**.
 2. Tap **Share → Add to Home Screen**.
 3. Launch CubeLab from the home screen: it opens full-screen and works offline.
 
@@ -26,7 +28,7 @@ A dark-themed speedcubing timer for **3x3x3, 4x4x4 and 5x5x5** that runs on **iP
 
 ### Windows
 
-Download `CubeLab-Timer-Setup-x.y.z.exe` (installer) or `CubeLab-Timer-x.y.z-portable.exe` (no install) from the **Releases** page. The app is not code-signed, so Windows SmartScreen may show "Windows protected your PC" — click **More info → Run anyway**.
+Download `CubeLab-Timer-Setup-x.y.z.exe` (installer) or `CubeLab-Timer-x.y.z-portable.exe` (no install) from the [**Releases**](https://github.com/Syncro-code/cubelab/releases/latest) page. The app is not code-signed, so Windows SmartScreen may show "Windows protected your PC" — click **More info → Run anyway**.
 
 ## Development
 

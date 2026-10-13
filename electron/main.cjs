@@ -6,7 +6,7 @@ const { pathToFileURL } = require('node:url');
 
 const APP_DIR = path.join(__dirname, '..', 'app');
 const SCHEME = 'cubelab';
-const HOMEPAGE = 'https://github.com'; // replaced with the repo URL once published
+const HOMEPAGE = 'https://github.com/Syncro-code/cubelab';
 
 protocol.registerSchemesAsPrivileged([{
   scheme: SCHEME,

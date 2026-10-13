@@ -77,7 +77,8 @@ function render() {
     h('div.card.card-pad', { style: { fontSize: '14px', color: 'var(--muted)' } },
       h('div', h('b', { style: { color: 'var(--text)' } }, 'CubeLab Timer'), ` v${VERSION}`),
       h('div', '3x3 scrambles are random-state (two-phase solver), 4x4 and 5x5 are random-move (40 / 60 moves).'),
-      h('div', '3D rendering by three.js (MIT).')));
+      h('div', '3D rendering by three.js (MIT).'),
+      h('div', h('a', { href: 'https://github.com/Syncro-code/cubelab', target: '_blank', rel: 'noopener' }, 'github.com/Syncro-code/cubelab'))));
   clear(root).append(wrap);
 }
 
