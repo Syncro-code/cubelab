@@ -1,0 +1,68 @@
+{
+  "name": "cubelab",
+  "productName": "CubeLab Timer",
+  "version": "1.0.0",
+  "description": "Speedcubing timer for 3x3, 4x4 and 5x5 with scrambles, averages, a 3D cube and tutorials.",
+  "author": "CubeLab",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "serve": "node scripts/serve.mjs",
+    "test": "node scripts/test-engine.mjs && node scripts/verify-algs.mjs && node scripts/check-assets.mjs",
+    "icons": "node scripts/make-icons.mjs",
+    "vendor": "node -e \"require('fs').copyFileSync('node_modules/three/build/three.module.min.js','app/vendor/three.module.min.js')\"",
+    "dist": "electron-builder --win --publish never",
+    "version": "node scripts/set-version.mjs && git add app/js/version.js app/sw.js"
+  },
+  "devDependencies": {
+    "electron": "^44.7.0",
+    "electron-builder": "^26.15.3",
+    "three": "^0.169.0"
+  },
+  "build": {
+    "appId": "io.github.cubelab.timer",
+    "productName": "CubeLab Timer",
+    "copyright": "CubeLab",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "app/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "CubeLab Timer",
+      "artifactName": "CubeLab-Timer-Setup-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "CubeLab-Timer-${version}-portable.${ext}"
+    }
+  }
+}
